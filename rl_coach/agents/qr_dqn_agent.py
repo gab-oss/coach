@@ -135,4 +135,3 @@ class QuantileRegressionDQNAgent(ValueOptimizationAgent):
         total_loss, losses, unclipped_grads = result[:3]
 
         return total_loss, losses, unclipped_grads
-
