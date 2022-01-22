@@ -42,8 +42,10 @@ from rl_coach.spaces import MultiSelectActionSpace, ImageObservationSpace, \
 # enum of the available levels and their path
 class DoomLevel(Enum):
     BASIC = "basic.cfg"
+    BASIC_MOD = "basic_mod.cfg"
     DEFEND = "defend_the_center.cfg"
     DEATHMATCH = "deathmatch.cfg"
+    DEATHMATCH_MOD = "deathmatch_mod.cfg"
     MY_WAY_HOME = "my_way_home.cfg"
     TAKE_COVER = "take_cover.cfg"
     HEALTH_GATHERING = "health_gathering.cfg"
@@ -65,8 +67,10 @@ key_map = {
     'MOVE_BACKWARD': ord("s"),
     'MOVE_DOWN': ord("s"),
     'MOVE_FORWARD': ord("w"),
-    'MOVE_LEFT': 276,
-    'MOVE_RIGHT': 275,
+    # 'MOVE_LEFT': 276,
+    # 'MOVE_RIGHT': 275,
+    'MOVE_LEFT': ord("n"),
+    'MOVE_RIGHT': ord("m"),
     'MOVE_UP': ord("w"),
     'RELOAD': ord("r"),
     'SELECT_NEXT_WEAPON': ord("q"),
