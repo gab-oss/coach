@@ -1,21 +1,14 @@
-from rl_coach.agents.dqn_agent import DQNAgentParameters, DQNNetworkParameters
 from rl_coach.agents.rainbow_dqn_agent import RainbowDQNAgentParameters
-from rl_coach.architectures.head_parameters import QuantileRegressionQHeadParameters
 from rl_coach.base_parameters import VisualizationParameters, PresetValidationParameters
 from rl_coach.core_types import CsvDataset, TrainingSteps, EnvironmentEpisodes, EnvironmentSteps
 from rl_coach.environments.doom_environment import DoomEnvironmentParameters
-from rl_coach.exploration_policies.boltzmann import BoltzmannParameters
 from rl_coach.exploration_policies.bootstrapped import BootstrappedParameters
 from rl_coach.exploration_policies.greedy import GreedyParameters
 from rl_coach.exploration_policies.parameter_noise import ParameterNoiseParameters
 from rl_coach.graph_managers.basic_rl_graph_manager import BasicRLGraphManager
 from rl_coach.graph_managers.graph_manager import ScheduleParameters
-from rl_coach.memories.episodic.episodic_experience_replay import EpisodicExperienceReplayParameters
 from rl_coach.memories.memory import MemoryGranularity
-from rl_coach.memories.non_episodic.experience_replay import ExperienceReplayParameters
 from rl_coach.schedules import LinearSchedule
-
-from rl_coach.core_types import PickledReplayBuffer
 
 
 
@@ -25,8 +18,8 @@ from rl_coach.core_types import PickledReplayBuffer
 
 schedule_params = ScheduleParameters()
 schedule_params.improve_steps = TrainingSteps(10000)
-schedule_params.steps_between_evaluation_periods = EnvironmentEpisodes(8) # kiedy skończyć
-schedule_params.evaluation_steps = EnvironmentEpisodes(4)
+schedule_params.steps_between_evaluation_periods = EnvironmentEpisodes(10) 
+schedule_params.evaluation_steps = EnvironmentEpisodes(1)
 schedule_params.heatup_steps = EnvironmentSteps(1000)
 
 
@@ -49,8 +42,10 @@ agent_params.memory.max_size = (MemoryGranularity.Transitions, 40000)
 
 agent_params.memory.beta = LinearSchedule(0.4, 1, 10000)
 agent_params.memory.alpha = 0.5
-agent_params.memory = ExperienceReplayParameters()
-agent_params.memory.load_memory_from_file_path = PickledReplayBuffer('/home/gabe/coach/experiments/gfd/22_01_2022-18_43/replay_buffer.p')
+
+# loading human interaction doesn't work
+#agent_params.memory = EpisodicExperienceReplayParameters()
+#agent_params.memory.load_memory_from_file_path = PickledReplayBuffer('/home/gabe/coach/experiments/gfd/22_01_2022-18_43/replay_buffer.p')
 
 
 ###############
@@ -68,12 +63,12 @@ preset_validation_params.max_episodes_to_achieve_reward = 400
 
 
 #default policy: ParameterNoise
-#agent_params.exploration = BootstrappedParameters()
-#agent_params.exploration = GreedyParameters()
+# agent_params.exploration = BootstrappedParameters()
+# agent_params.exploration = GreedyParameters()
+# agent_params.exploration = ParameterNoiseParameters(agent_params)
 
-#default n_step = 3
-agent_params.algorithm.n_step = 10
-
+preset_validation_params.min_reward_threshold = 50
+preset_validation_params.max_episodes_to_achieve_reward = 250
 
 
 graph_manager = BasicRLGraphManager(agent_params=agent_params, env_params=env_params,
