@@ -15,6 +15,5 @@ args = parser.parse_args()
 for i in range(args.num):
     tf.reset_default_graph()
     coach = CoachInterface(preset='Doom_Basic_Rainbow',
-                        num_workers=1, checkpoint_save_secs=30)
-
+                        num_workers=1)
     coach.run()

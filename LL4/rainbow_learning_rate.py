@@ -9,22 +9,22 @@ if module_path not in sys.path:
 from rl_coach.coach import CoachInterface
 import argparse
 
-parser = argparse.ArgumentParser(description='Training parameters -- set the range of discount (as % -- will be scaled to 0-1)')
+parser = argparse.ArgumentParser(description='Training parameters -- set the range of learning rate')
 parser.add_argument('start', type=int, 
-                    help='value of discount to start with')
+                    help='value of learning rate to start with')
 parser.add_argument('stop', type=int, 
-                    help='value of discount to stop with')
+                    help='value of learning rate to stop with')
 parser.add_argument('step', type=int,
                     help='iteration step')
 
 args = parser.parse_args()
 
-
-for i in range(args.start, args.stop, args.step):
+rate = args.start
+while rate <= args.stop:
     tf.reset_default_graph()
-    discount = i/100
-    print("agent_params.algorithm.discount={}".format(i))
+    print("agent_params.network_wrappers['main'].learning_rate={}".format(rate))
     coach = CoachInterface(preset='Doom_Basic_Rainbow',
-                        custom_parameter='agent_params.algorithm.discount={}'.format(i),
+                        custom_parameter="agent_params.network_wrappers['main'].learning_rate={}".format(rate),
                         num_workers=1)
     coach.run()
+    rate += args.step

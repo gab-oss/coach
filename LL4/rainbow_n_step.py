@@ -9,11 +9,11 @@ if module_path not in sys.path:
 from rl_coach.coach import CoachInterface
 import argparse
 
-parser = argparse.ArgumentParser(description='N-step')
+parser = argparse.ArgumentParser(description='Training parameters -- set the range of n_step')
 parser.add_argument('start', type=int, 
-                    help='n-steps to start with')
+                    help='value of n_step to start with')
 parser.add_argument('stop', type=int, 
-                    help='n-steps to stop with')
+                    help='value of n_step to stop with')
 parser.add_argument('step', type=int,
                     help='iteration step')
 
@@ -25,6 +25,5 @@ for i in range(args.start,args.stop,args.step):
     print("agent_params.algorithm.n_step={}".format(i))
     coach = CoachInterface(preset='Doom_Basic_Rainbow',
                         custom_parameter='agent_params.algorithm.n_step={}'.format(i),
-                        num_workers=1, checkpoint_save_secs=30)
-
+                        num_workers=1)
     coach.run()

@@ -10,7 +10,8 @@ from rl_coach.graph_managers.graph_manager import ScheduleParameters
 from rl_coach.memories.memory import MemoryGranularity
 from rl_coach.schedules import LinearSchedule
 
-
+# change parameters after analizing previous experimets
+# then use in experiments with different levels
 
 ####################
 # Graph Scheduling #

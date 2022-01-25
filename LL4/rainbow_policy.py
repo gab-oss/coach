@@ -15,6 +15,5 @@ for p in policies:
     print("agent_params.exploration={}".format(p))
     coach = CoachInterface(preset='Doom_Basic_Rainbow',
                         custom_parameter='agent_params.exploration={}'.format(p),
-                        num_workers=1, checkpoint_save_secs=30)
-
+                        num_workers=1)
     coach.run()

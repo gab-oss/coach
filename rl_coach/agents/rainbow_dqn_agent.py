@@ -84,7 +84,6 @@ class RainbowDQNAgentParameters(CategoricalDQNAgentParameters):
 class RainbowDQNAgent(CategoricalDQNAgent):
     def __init__(self, agent_parameters, parent: Union['LevelManager', 'CompositeAgent']=None):
         super().__init__(agent_parameters, parent)
-        print(agent_parameters.algorithm.n_step)
 
 
     def learn_from_batch(self, batch):
