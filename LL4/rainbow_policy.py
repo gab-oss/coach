@@ -8,7 +8,7 @@ if module_path not in sys.path:
     
 from rl_coach.coach import CoachInterface
 
-policies = ["BootstrappedParameters()", "GreedyParameters()"] 
+policies = ["EGreedyParameters();agent_params.exploration.epsilon_schedule = LinearSchedule(1.0, 0.01, 10000)"] 
 
 for p in policies:
     tf.reset_default_graph()

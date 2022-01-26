@@ -52,6 +52,8 @@ from rl_coach.training_worker import training_worker
 from rl_coach.rollout_worker import rollout_worker
 from rl_coach.schedules import *
 from rl_coach.exploration_policies.e_greedy import *
+from rl_coach.exploration_policies.bootstrapped import *
+from rl_coach.exploration_policies.parameter_noise import ParameterNoiseParameters
 
 
 if len(set(failed_imports)) > 0:

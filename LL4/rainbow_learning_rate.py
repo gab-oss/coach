@@ -10,11 +10,11 @@ from rl_coach.coach import CoachInterface
 import argparse
 
 parser = argparse.ArgumentParser(description='Training parameters -- set the range of learning rate')
-parser.add_argument('start', type=int, 
+parser.add_argument('start', type=float, 
                     help='value of learning rate to start with')
-parser.add_argument('stop', type=int, 
+parser.add_argument('stop', type=float, 
                     help='value of learning rate to stop with')
-parser.add_argument('step', type=int,
+parser.add_argument('step', type=float,
                     help='iteration step')
 
 args = parser.parse_args()
