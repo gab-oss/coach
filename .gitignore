@@ -1,5 +1,4 @@
 .idea
-experiments
 *.pyc
 checkpoints
 _vizdoom.ini
