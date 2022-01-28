@@ -1,21 +1,21 @@
 sess: 
-<tensorflow.python.client.session.Session object at 0x7fe2f712bda0>
+<tensorflow.python.client.session.Session object at 0x7fa997e99f28>
 level_managers: 
-0: <rl_coach.level_manager.LevelManager object at 0x7fe2f712bd68>
+0: <rl_coach.level_manager.LevelManager object at 0x7fa997e99ef0>
 
 top_level_manager: 
-<rl_coach.level_manager.LevelManager object at 0x7fe2f712bd68>
+<rl_coach.level_manager.LevelManager object at 0x7fa997e99ef0>
 environments: 
-0: <rl_coach.environments.doom_environment.DoomEnvironment object at 0x7fe2f712b128>
+0: <rl_coach.environments.doom_environment.DoomEnvironment object at 0x7fa997e992b0>
 
 heatup_steps: 
-<rl_coach.core_types.EnvironmentSteps object at 0x7fe2f711a7b8>
+<rl_coach.core_types.EnvironmentSteps object at 0x7fa997e81cc0>
 evaluation_steps: 
-<rl_coach.core_types.EnvironmentEpisodes object at 0x7fe2f711a6d8>
+<rl_coach.core_types.EnvironmentEpisodes object at 0x7fa997e81fd0>
 steps_between_evaluation_periods: 
-<rl_coach.core_types.EnvironmentEpisodes object at 0x7fe2f7efeef0>
+<rl_coach.core_types.EnvironmentEpisodes object at 0x7fa997e81f60>
 improve_steps: 
-<rl_coach.core_types.TrainingSteps object at 0x7fe2f7ef5ef0>
+<rl_coach.core_types.TrainingSteps object at 0x7fa997e81940>
 visualization_parameters: 
 "VisualizationParameters" {
     "add_rendered_image_to_env_response": false,
@@ -57,7 +57,7 @@ task_parameters:
     "checkpoint_save_dir": null,
     "checkpoint_save_secs": null,
     "evaluate_only": null,
-    "experiment_path": "./experiments/25_01_2022-02_06",
+    "experiment_path": "./experiments/28_01_2022-23_11",
     "export_onnx_graph": false,
     "framework_type": {
         "_value_": "TensorFlow",
@@ -88,22 +88,22 @@ preset_validation_params:
 reset_required: 
 False
 graph_creation_time: 
-1643072809.4561691
+1643407877.5937936
 last_checkpoint_saving_time: 
-1643072809.4501739
+1643407877.5868192
 total_steps_counters: 
-RunPhase.HEATUP: <rl_coach.core_types.TotalStepsCounter object at 0x7fe2f711a5c0>
-RunPhase.TRAIN: <rl_coach.core_types.TotalStepsCounter object at 0x7fe2f711a5f8>
-RunPhase.TEST: <rl_coach.core_types.TotalStepsCounter object at 0x7fe2f711a9b0>
+RunPhase.HEATUP: <rl_coach.core_types.TotalStepsCounter object at 0x7fa997e81a20>
+RunPhase.TRAIN: <rl_coach.core_types.TotalStepsCounter object at 0x7fa997e81c50>
+RunPhase.TEST: <rl_coach.core_types.TotalStepsCounter object at 0x7fa997e81c88>
 
 checkpoint_id: 
 0
 checkpoint_saver: 
-<rl_coach.saver.SaverCollection object at 0x7fe2f4a76a58>
+<rl_coach.saver.SaverCollection object at 0x7fa9957e3828>
 checkpoint_state_updater: 
 None
 graph_logger: 
-<rl_coach.logger.Logger object at 0x7fe2f711a898>
+<rl_coach.logger.Logger object at 0x7fa997e81ba8>
 data_store: 
 None
 is_batch_rl: 
@@ -607,7 +607,7 @@ agent_params:
         "checkpoint_save_dir": null,
         "checkpoint_save_secs": null,
         "evaluate_only": null,
-        "experiment_path": "./experiments/25_01_2022-02_06",
+        "experiment_path": "./experiments/28_01_2022-23_11",
         "export_onnx_graph": false,
         "framework_type": {
             "_value_": "TensorFlow",
@@ -729,7 +729,7 @@ env_params:
         "name": null,
         "__class__": "OutputFilter"
     },
-    "experiment_path": "./experiments/25_01_2022-02_06",
+    "experiment_path": "./experiments/28_01_2022-23_11",
     "frame_skip": 4,
     "human_control": false,
     "level": "basic",

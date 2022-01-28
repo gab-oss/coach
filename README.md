@@ -35,6 +35,6 @@ Ze względu na problemy dashboardem (brak legendy przy wczytywaniu całego katal
 
 cd LL4/experiments
 
-1. bash move.sh - tworzy w każdym typie eksperymentu (np. LL4/experiments/rainbow_training_steps_15000) katalog results ze zgromadzonymi plikami csv z każdego przebiegu; w tym katalogu results należy uruchomić z konsoli dashboard i wybrać po kolei ("Select file") pliki z folderu, który pierwszy się otworzy
+1. bash move.sh - tworzy w każdym typie eksperymentu (np. LL4/experiments/rainbow_discount_11_100_11) katalog "results" ze zgromadzonymi plikami csv z każdego przebiegu; po przejściu do katalogu "results" należy uruchomić z konsoli dashboard i wybrać po kolei ("Select file") pliki z folderu, który pierwszy się otworzy. Każdy plik z wynikami nazywa się tak, jak jego oryginalny folder. W przypadku testów ze zmianami parametrów algorytmów w nazwie jest data i godzina uruchomienia, dlatego kolejne, posortowane pliki będą zawierały wyniki testów w takiej kolejności, w jakiej zostały wykonane w danym typie eksperymentu (testy są zdefiniowane w LL4/[nazwa algorytmu]_parameters_test_suite.sh), czyli zazwyczaj z coraz większymi wartościami zmienianych parametrów.
 
 2. bash move_levels_results.sh - podobny do poprzedniego, gromadzi wyniki z eksperymentów dla algorytmów z domyślnymi parametrami na różnych poziomach w folderze LL4/experiments/levels_results
