@@ -21,7 +21,7 @@ bash rainbow_parameters_test_suite.sh
 
 bash qr_dqn_parameters_test_suite.sh
 
-## Testy dla obu algorytmów z domyślnymi parametrami na różnych poziomach
+### Testy dla obu algorytmów z domyślnymi parametrami na różnych poziomach
 
 cd LL4 
 
@@ -29,7 +29,7 @@ bash set_scenarios.sh - ładuje konfigurację czterech używanych poziomów gry 
 
 bash compare_on_different_levels.sh - uruchamia przebiegi dla presetów Doom_Basic_Rainbow i Doom_Basid_QR_DQN na poziomach: BASIC, DEATHMATCH, BASCI_MOD, DEATHMATCH_MOD
 
-## Wizualizacja
+### Wizualizacja
 
 Ze względu na problemy dashboardem (brak legendy przy wczytywaniu całego katalogu, błędy przy wczytywaniu katalogu), wizualizację wykonywaliśmy w następujący sposób:
 
