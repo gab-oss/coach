@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# move results (csv) to one folder for every type of experiment, ./[experiment_type]/results/
 for exp_type in */ ; do
 	cd "${exp_type}/experiments"
 	mkdir ../results

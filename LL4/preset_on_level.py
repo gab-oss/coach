@@ -9,7 +9,7 @@ if module_path not in sys.path:
 from rl_coach.coach import CoachInterface
 import argparse
 
-parser = argparse.ArgumentParser(description='Set preset and level')
+parser = argparse.ArgumentParser(description='Run preset on level')
 parser.add_argument('preset', type=str, 
                     help='preset name')
 parser.add_argument('lvl', type=str, 
