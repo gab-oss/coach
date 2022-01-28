@@ -10,6 +10,7 @@ from rl_coach.coach import CoachInterface
 
 policies = ["EGreedyParameters();agent_params.exploration.epsilon_schedule = LinearSchedule(1.0, 0.01, 10000)"] 
 
+# run with new policy
 for p in policies:
     tf.reset_default_graph()
     print("agent_params.exploration={}".format(p))
@@ -17,3 +18,8 @@ for p in policies:
                         custom_parameter='agent_params.exploration={}'.format(p),
                         num_workers=1)
     coach.run()
+
+# run with default policy
+coach = CoachInterface(preset='Doom_Basic_Rainbow',
+                    num_workers=1)
+coach.run()

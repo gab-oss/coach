@@ -44,10 +44,6 @@ agent_params.memory.max_size = (MemoryGranularity.Transitions, 40000)
 agent_params.memory.beta = LinearSchedule(0.4, 1, 10000)
 agent_params.memory.alpha = 0.5
 
-# loading human interaction doesn't work
-#agent_params.memory = EpisodicExperienceReplayParameters()
-#agent_params.memory.load_memory_from_file_path = PickledReplayBuffer('/home/gabe/coach/experiments/gfd/22_01_2022-18_43/replay_buffer.p')
-
 
 ###############
 # Environment #

@@ -4,7 +4,7 @@ EXP='experiments'
 bash set_scenarios.sh
 
 for lvl in "basic" "basic_mod" "deathmatch" "deatchmatch_mod" ; do
-    for preset in "Doom_Basic_Rainbow_New_Params" "Doom_Basic_QR_DQN_New_Params" ; do
+    for preset in "Doom_Basic_Rainbow" "Doom_Basic_QR_DQN" ; do
         DIR="${preset}_${lvl}"
         rm -rf $EXP/$DIR
         mkdir -p $EXP/$DIR

@@ -45,17 +45,6 @@ VIZDOOM_ROOT=$VIZDOOM_ROOT && python3.6 ../../rainbow_policy.py
 VIZDOOM_ROOT=$VIZDOOM_ROOT && coach -r -p Doom_Basic_Rainbow
 cd ../..
 
-# run with a range of learning rates
-START=0.0001
-STOP=0.00055
-STEP=0.0001
-DIR="rainbow_learning_rate_${START}_${STOP}_${STEP}"
-rm -rf $EXP/$DIR
-mkdir -p $EXP/$DIR
-cd $EXP/$DIR
-VIZDOOM_ROOT=$VIZDOOM_ROOT && python3.6 ../../rainbow_learning_rate.py $START $STOP $STEP
-cd ../..
-
 # run with a wider range of learning rates
 START=0.00001
 STOP=0.99999

@@ -1,0 +1,698 @@
+sess: 
+<tensorflow.python.client.session.Session object at 0x7fa326ab4da0>
+level_managers: 
+0: <rl_coach.level_manager.LevelManager object at 0x7fa326ab4eb8>
+
+top_level_manager: 
+<rl_coach.level_manager.LevelManager object at 0x7fa326ab4eb8>
+environments: 
+0: <rl_coach.environments.doom_environment.DoomEnvironment object at 0x7fa33b4225c0>
+
+heatup_steps: 
+<rl_coach.core_types.EnvironmentSteps object at 0x7fa33bf89c18>
+evaluation_steps: 
+<rl_coach.core_types.EnvironmentEpisodes object at 0x7fa33bf89c50>
+steps_between_evaluation_periods: 
+<rl_coach.core_types.EnvironmentEpisodes object at 0x7fa33bf89dd8>
+improve_steps: 
+<rl_coach.core_types.TrainingSteps object at 0x7fa33bf89b38>
+visualization_parameters: 
+"VisualizationParameters" {
+    "add_rendered_image_to_env_response": false,
+    "dump_csv": true,
+    "dump_gifs": false,
+    "dump_in_episode_signals": false,
+    "dump_mp4": false,
+    "dump_parameters_documentation": true,
+    "dump_signals_to_csv_every_x_episodes": 5,
+    "max_fps_for_human_control": 10,
+    "native_rendering": false,
+    "print_networks_summary": false,
+    "render": true,
+    "tensorboard": false,
+    "video_dump_filters": {
+        "0": {
+            "run_phases": {
+                "0": {
+                    "_value_": "Testing",
+                    "_name_": "TEST",
+                    "__objclass__": "<enum 'RunPhase'>"
+                }
+            },
+            "__class__": "SelectedPhaseOnlyDumpFilter"
+        },
+        "1": {
+            "max_reward_achieved": -Infinity,
+            "__class__": "MaxDumpFilter"
+        }
+    }
+}
+
+name: 
+simple_rl_graph
+task_parameters: 
+"TaskParameters" {
+    "apply_stop_condition": false,
+    "checkpoint_restore_path": null,
+    "checkpoint_save_dir": null,
+    "checkpoint_save_secs": null,
+    "evaluate_only": null,
+    "experiment_path": "./experiments/deathmatch_dqn/28_01_2022-19_57",
+    "export_onnx_graph": false,
+    "framework_type": {
+        "_value_": "TensorFlow",
+        "_name_": "tensorflow",
+        "__objclass__": "<enum 'Frameworks'>"
+    },
+    "num_gpu": 1,
+    "seed": null,
+    "task_index": 0,
+    "use_cpu": false
+}
+
+_phase: 
+RunPhase.UNDEFINED
+preset_validation_params: 
+"PresetValidationParameters" {
+    "max_episodes_to_achieve_reward": 400,
+    "min_reward_threshold": 20,
+    "num_workers": 1,
+    "read_csv_tries": 200,
+    "reward_test_level": null,
+    "test": true,
+    "test_using_a_trace_test": true,
+    "trace_max_env_steps": 5000,
+    "trace_test_levels": null
+}
+
+reset_required: 
+False
+graph_creation_time: 
+1643396265.2947874
+last_checkpoint_saving_time: 
+1643396265.2916374
+total_steps_counters: 
+RunPhase.HEATUP: <rl_coach.core_types.TotalStepsCounter object at 0x7fa33c285a20>
+RunPhase.TRAIN: <rl_coach.core_types.TotalStepsCounter object at 0x7fa33c285978>
+RunPhase.TEST: <rl_coach.core_types.TotalStepsCounter object at 0x7fa33c285dd8>
+
+checkpoint_id: 
+0
+checkpoint_saver: 
+<rl_coach.saver.SaverCollection object at 0x7fa31ff32d30>
+checkpoint_state_updater: 
+None
+graph_logger: 
+<rl_coach.logger.Logger object at 0x7fa33c285908>
+data_store: 
+None
+is_batch_rl: 
+False
+time_metric: 
+TimeTypes.EpisodeNumber
+agent_params: 
+"DQNAgentParameters" {
+    "algorithm": {
+        "act_for_full_episodes": false,
+        "apply_gradients_every_x_episodes": 5,
+        "discount": 0.99,
+        "distributed_coach_synchronization_type": null,
+        "heatup_using_network_decisions": false,
+        "in_action_space": null,
+        "load_memory_from_file_path": null,
+        "n_step": -1,
+        "num_consecutive_playing_steps": {
+            "_num_steps": 1,
+            "__class__": "EnvironmentSteps"
+        },
+        "num_consecutive_training_steps": 1,
+        "num_steps_between_copying_online_weights_to_target": {
+            "_num_steps": 1000,
+            "__class__": "EnvironmentSteps"
+        },
+        "override_episode_rewards_with_the_last_transition_reward": false,
+        "rate_for_copying_weights_to_target": 1.0,
+        "share_statistics_between_workers": true,
+        "store_transitions_only_when_episodes_are_terminated": false,
+        "supports_parameter_noise": true,
+        "update_pre_network_filters_state_on_inference": true,
+        "update_pre_network_filters_state_on_train": false,
+        "use_accumulated_reward_as_measurement": false,
+        "__class__": "DQNAlgorithmParameters"
+    },
+    "current_episode": 0,
+    "exploration": {
+        "action_space": {
+            "_high": "array([20.])",
+            "_low": "array([0.])",
+            "_shape": "array([1])",
+            "default_action": 0,
+            "descriptions": {},
+            "filtered_action_space": {
+                "_actions": {
+                    "0": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "1": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 1.])",
+                    "2": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 1., 0.])",
+                    "3": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       1., 0., 0.])",
+                    "4": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1.,\n       0., 0., 0.])",
+                    "5": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0.,\n       0., 0., 0.])",
+                    "6": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0.,\n       0., 0., 0.])",
+                    "7": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0.,\n       0., 0., 0.])",
+                    "8": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "9": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "10": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "11": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "12": "array([0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "13": "array([0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "14": "array([0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "15": "array([0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "16": "array([0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "17": "array([0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "18": "array([0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "19": "array([0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "20": "array([1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])"
+                },
+                "_high": null,
+                "_low": null,
+                "_shape": "array([20])",
+                "default_action": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                "descriptions": {
+                    "0": "MOVE_LEFT_RIGHT_DELTA",
+                    "1": "TURN_LEFT_RIGHT_DELTA",
+                    "2": "LOOK_UP_DOWN_DELTA",
+                    "3": "SELECT_PREV_WEAPON",
+                    "4": "SELECT_NEXT_WEAPON",
+                    "5": "SELECT_WEAPON6",
+                    "6": "SELECT_WEAPON5",
+                    "7": "SELECT_WEAPON4",
+                    "8": "SELECT_WEAPON3",
+                    "9": "SELECT_WEAPON2",
+                    "10": "SELECT_WEAPON1",
+                    "11": "TURN_LEFT",
+                    "12": "TURN_RIGHT",
+                    "13": "MOVE_FORWARD",
+                    "14": "MOVE_BACKWARD",
+                    "15": "MOVE_LEFT",
+                    "16": "MOVE_RIGHT",
+                    "17": "STRAFE",
+                    "18": "SPEED",
+                    "19": "ATTACK",
+                    "20": "NO-OP"
+                },
+                "max_simultaneous_selected_actions": 1,
+                "num_dimensions": 1,
+                "num_elements": 20,
+                "__class__": "MultiSelectActionSpace"
+            },
+            "num_dimensions": 1,
+            "num_elements": 1,
+            "__class__": "DiscreteActionSpace"
+        },
+        "continuous_exploration_policy_parameters": {
+            "action_space": null,
+            "evaluation_noise": 0.05,
+            "noise_as_percentage_from_action_space": true,
+            "noise_schedule": {
+                "current_value": 0.1,
+                "decay_delta": 0.0,
+                "decay_steps": 50000,
+                "final_value": 0.1,
+                "initial_value": 0.1,
+                "__class__": "LinearSchedule"
+            },
+            "__class__": "AdditiveNoiseParameters"
+        },
+        "epsilon_schedule": {
+            "current_value": 0,
+            "decay_delta": 0.0,
+            "decay_steps": 50000,
+            "final_value": 0,
+            "initial_value": 0,
+            "__class__": "LinearSchedule"
+        },
+        "evaluation_epsilon": 0,
+        "__class__": "EGreedyParameters"
+    },
+    "full_name_id": "main_level/agent",
+    "input_filter": {
+        "_observation_filters": {
+            "observation": {
+                "rescaling": {
+                    "name": null,
+                    "output_observation_space": {
+                        "_high": "array([[[255., 255., 255.],\n        [255., 255., 255.],\n        [255., 255., 255.],\n        ...,\n        [255., 255., 255.],\n        [255., 255., 255.],\n        [255., 255., 255.]],\n\n       [[255., 255., 255.],\n        [255., 255., 255.],\n        [255., 255., 255.],\n        ...,\n        [255., 255., 255.],\n        [255., 255., 255.],\n        [255., 255., 255.]],\n\n       [[255., 255., 255.],\n        [255., 255., 255.],\n        [255., 255., 255.],\n        ...,\n        [255., 255., 255.],\n        [255., 255., 255.],\n        [255., 255., 255.]],\n\n       ...,\n\n       [[255., 255., 255.],\n        [255., 255., 255.],\n        [255., 255., 255.],\n        ...,\n        [255., 255., 255.],\n        [255., 255., 255.],\n        [255., 255., 255.]],\n\n       [[255., 255., 255.],\n        [255., 255., 255.],\n        [255., 255., 255.],\n        ...,\n        [255., 255., 255.],\n        [255., 255., 255.],\n        [255., 255., 255.]],\n\n       [[255., 255., 255.],\n        [255., 255., 255.],\n        [255., 255., 255.],\n        ...,\n        [255., 255., 255.],\n        [255., 255., 255.],\n        [255., 255., 255.]]])",
+                        "_low": "array([[[0., 0., 0.],\n        [0., 0., 0.],\n        [0., 0., 0.],\n        ...,\n        [0., 0., 0.],\n        [0., 0., 0.],\n        [0., 0., 0.]],\n\n       [[0., 0., 0.],\n        [0., 0., 0.],\n        [0., 0., 0.],\n        ...,\n        [0., 0., 0.],\n        [0., 0., 0.],\n        [0., 0., 0.]],\n\n       [[0., 0., 0.],\n        [0., 0., 0.],\n        [0., 0., 0.],\n        ...,\n        [0., 0., 0.],\n        [0., 0., 0.],\n        [0., 0., 0.]],\n\n       ...,\n\n       [[0., 0., 0.],\n        [0., 0., 0.],\n        [0., 0., 0.],\n        ...,\n        [0., 0., 0.],\n        [0., 0., 0.],\n        [0., 0., 0.]],\n\n       [[0., 0., 0.],\n        [0., 0., 0.],\n        [0., 0., 0.],\n        ...,\n        [0., 0., 0.],\n        [0., 0., 0.],\n        [0., 0., 0.]],\n\n       [[0., 0., 0.],\n        [0., 0., 0.],\n        [0., 0., 0.],\n        ...,\n        [0., 0., 0.],\n        [0., 0., 0.],\n        [0., 0., 0.]]])",
+                        "_shape": "array([60, 76,  3])",
+                        "channels": "3",
+                        "channels_axis": -1,
+                        "has_colors": "True",
+                        "num_dimensions": 3,
+                        "num_elements": 13680,
+                        "__class__": "ImageObservationSpace"
+                    },
+                    "planar_map_output_shape": "array([60, 76])",
+                    "supports_batching": false,
+                    "__class__": "ObservationRescaleToSizeFilter"
+                },
+                "to_grayscale": {
+                    "name": null,
+                    "supports_batching": false,
+                    "__class__": "ObservationRGBToYFilter"
+                },
+                "to_uint8": {
+                    "input_high": 255,
+                    "input_low": 0,
+                    "name": null,
+                    "supports_batching": false,
+                    "__class__": "ObservationToUInt8Filter"
+                },
+                "stacking": {
+                    "input_observation_space": null,
+                    "name": null,
+                    "stack": {},
+                    "stack_size": 3,
+                    "stacking_axis": -1,
+                    "supports_batching": false,
+                    "__class__": "ObservationStackingFilter"
+                }
+            }
+        },
+        "_reward_filters": {},
+        "i_am_a_reference_filter": false,
+        "name": "input_filter",
+        "__class__": "InputFilter"
+    },
+    "is_a_highest_level_agent": true,
+    "is_a_lowest_level_agent": true,
+    "is_batch_rl_training": false,
+    "memory": {
+        "allow_duplicates_in_batch_sampling": true,
+        "load_memory_from_file_path": null,
+        "max_size": [
+            "<MemoryGranularity.Transitions: 0>",
+            5000
+        ],
+        "shared_memory": false,
+        "__class__": "ExperienceReplayParameters"
+    },
+    "name": "agent",
+    "network_wrappers": {
+        "main": {
+            "adam_optimizer_beta1": 0.9,
+            "adam_optimizer_beta2": 0.99,
+            "async_training": false,
+            "batch_size": 32,
+            "clip_gradients": null,
+            "create_target_network": true,
+            "embedding_merger_type": {
+                "_value_": 0,
+                "_name_": "Concat",
+                "__objclass__": "<enum 'EmbeddingMergerType'>"
+            },
+            "force_cpu": false,
+            "framework": {
+                "_value_": "TensorFlow",
+                "_name_": "tensorflow",
+                "__objclass__": "<enum 'Frameworks'>"
+            },
+            "gradients_clipping_method": {
+                "_value_": 0,
+                "_name_": "ClipByGlobalNorm",
+                "__objclass__": "<enum 'GradientClippingMethod'>"
+            },
+            "heads_parameters": {
+                "0": {
+                    "activation_function": "relu",
+                    "dense_layer": null,
+                    "is_training": false,
+                    "loss_weight": 1.0,
+                    "name": "q_head_params",
+                    "num_output_head_copies": 1,
+                    "output_bias_initializer": null,
+                    "parameterized_class_name": "QHead",
+                    "rescale_gradient_from_head_by_factor": 1.0,
+                    "__class__": "QHeadParameters"
+                }
+            },
+            "input_embedders_parameters": {
+                "observation": {
+                    "activation_function": "relu",
+                    "batchnorm": false,
+                    "dense_layer": null,
+                    "dropout_rate": 0.0,
+                    "flatten": true,
+                    "input_clipping": null,
+                    "input_offset": {
+                        "image": 0.0,
+                        "tensor": 0.0,
+                        "vector": 0.0
+                    },
+                    "input_rescaling": {
+                        "image": 255.0,
+                        "tensor": 1.0,
+                        "vector": 1.0
+                    },
+                    "is_training": false,
+                    "name": "embedder",
+                    "scheme": {
+                        "_value_": "Medium",
+                        "_name_": "Medium",
+                        "__objclass__": "<enum 'EmbedderScheme'>"
+                    },
+                    "__class__": "InputEmbedderParameters"
+                }
+            },
+            "l2_regularization": 0,
+            "learning_rate": 0.00025,
+            "learning_rate_decay_rate": 0,
+            "learning_rate_decay_steps": 0,
+            "middleware_parameters": {
+                "activation_function": "relu",
+                "batchnorm": false,
+                "dense_layer": null,
+                "dropout_rate": 0.0,
+                "is_training": false,
+                "name": "middleware_fc_embedder",
+                "num_streams": 1,
+                "parameterized_class_name": "FCMiddleware",
+                "scheme": {
+                    "_value_": "Medium",
+                    "_name_": "Medium",
+                    "__objclass__": "<enum 'MiddlewareScheme'>"
+                },
+                "__class__": "FCMiddlewareParameters"
+            },
+            "optimizer_epsilon": 0.0001,
+            "optimizer_type": "Adam",
+            "replace_mse_with_huber_loss": false,
+            "rms_prop_optimizer_decay": 0.9,
+            "scale_down_gradients_by_number_of_workers_for_sync_training": true,
+            "sess": null,
+            "shared_optimizer": true,
+            "should_get_softmax_probabilities": false,
+            "softmax_temperature": 1,
+            "tensorflow_support": true,
+            "use_separate_networks_per_head": false,
+            "__class__": "DQNNetworkParameters"
+        }
+    },
+    "output_filter": {
+        "_action_filters": {
+            "to_discrete": {
+                "descriptions": null,
+                "input_action_space": {
+                    "_high": "array([20.])",
+                    "_low": "array([0.])",
+                    "_shape": "array([1])",
+                    "default_action": 0,
+                    "descriptions": {},
+                    "filtered_action_space": {
+                        "_actions": {
+                            "0": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                            "1": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 1.])",
+                            "2": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 1., 0.])",
+                            "3": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       1., 0., 0.])",
+                            "4": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1.,\n       0., 0., 0.])",
+                            "5": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0.,\n       0., 0., 0.])",
+                            "6": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0.,\n       0., 0., 0.])",
+                            "7": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0.,\n       0., 0., 0.])",
+                            "8": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                            "9": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                            "10": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                            "11": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                            "12": "array([0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                            "13": "array([0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                            "14": "array([0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                            "15": "array([0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                            "16": "array([0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                            "17": "array([0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                            "18": "array([0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                            "19": "array([0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                            "20": "array([1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])"
+                        },
+                        "_high": null,
+                        "_low": null,
+                        "_shape": "array([20])",
+                        "default_action": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                        "descriptions": {
+                            "0": "MOVE_LEFT_RIGHT_DELTA",
+                            "1": "TURN_LEFT_RIGHT_DELTA",
+                            "2": "LOOK_UP_DOWN_DELTA",
+                            "3": "SELECT_PREV_WEAPON",
+                            "4": "SELECT_NEXT_WEAPON",
+                            "5": "SELECT_WEAPON6",
+                            "6": "SELECT_WEAPON5",
+                            "7": "SELECT_WEAPON4",
+                            "8": "SELECT_WEAPON3",
+                            "9": "SELECT_WEAPON2",
+                            "10": "SELECT_WEAPON1",
+                            "11": "TURN_LEFT",
+                            "12": "TURN_RIGHT",
+                            "13": "MOVE_FORWARD",
+                            "14": "MOVE_BACKWARD",
+                            "15": "MOVE_LEFT",
+                            "16": "MOVE_RIGHT",
+                            "17": "STRAFE",
+                            "18": "SPEED",
+                            "19": "ATTACK",
+                            "20": "NO-OP"
+                        },
+                        "max_simultaneous_selected_actions": 1,
+                        "num_dimensions": 1,
+                        "num_elements": 20,
+                        "__class__": "MultiSelectActionSpace"
+                    },
+                    "num_dimensions": 1,
+                    "num_elements": 1,
+                    "__class__": "DiscreteActionSpace"
+                },
+                "name": null,
+                "output_action_space": {
+                    "_actions": {
+                        "0": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                        "1": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 1.])",
+                        "2": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 1., 0.])",
+                        "3": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       1., 0., 0.])",
+                        "4": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1.,\n       0., 0., 0.])",
+                        "5": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0.,\n       0., 0., 0.])",
+                        "6": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0.,\n       0., 0., 0.])",
+                        "7": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0.,\n       0., 0., 0.])",
+                        "8": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                        "9": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                        "10": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                        "11": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                        "12": "array([0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                        "13": "array([0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                        "14": "array([0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                        "15": "array([0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                        "16": "array([0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                        "17": "array([0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                        "18": "array([0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                        "19": "array([0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                        "20": "array([1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])"
+                    },
+                    "_high": null,
+                    "_low": null,
+                    "_shape": "array([20])",
+                    "default_action": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "descriptions": {
+                        "0": "MOVE_LEFT_RIGHT_DELTA",
+                        "1": "TURN_LEFT_RIGHT_DELTA",
+                        "2": "LOOK_UP_DOWN_DELTA",
+                        "3": "SELECT_PREV_WEAPON",
+                        "4": "SELECT_NEXT_WEAPON",
+                        "5": "SELECT_WEAPON6",
+                        "6": "SELECT_WEAPON5",
+                        "7": "SELECT_WEAPON4",
+                        "8": "SELECT_WEAPON3",
+                        "9": "SELECT_WEAPON2",
+                        "10": "SELECT_WEAPON1",
+                        "11": "TURN_LEFT",
+                        "12": "TURN_RIGHT",
+                        "13": "MOVE_FORWARD",
+                        "14": "MOVE_BACKWARD",
+                        "15": "MOVE_LEFT",
+                        "16": "MOVE_RIGHT",
+                        "17": "STRAFE",
+                        "18": "SPEED",
+                        "19": "ATTACK",
+                        "20": "NO-OP"
+                    },
+                    "max_simultaneous_selected_actions": 1,
+                    "num_dimensions": 1,
+                    "num_elements": 20,
+                    "__class__": "MultiSelectActionSpace"
+                },
+                "target_actions": {
+                    "0": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "1": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 1.])",
+                    "2": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 1., 0.])",
+                    "3": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       1., 0., 0.])",
+                    "4": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1.,\n       0., 0., 0.])",
+                    "5": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0.,\n       0., 0., 0.])",
+                    "6": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0.,\n       0., 0., 0.])",
+                    "7": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0.,\n       0., 0., 0.])",
+                    "8": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "9": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "10": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "11": "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "12": "array([0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "13": "array([0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "14": "array([0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "15": "array([0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "16": "array([0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "17": "array([0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "18": "array([0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "19": "array([0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])",
+                    "20": "array([1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n       0., 0., 0.])"
+                },
+                "__class__": "FullDiscreteActionSpaceMap"
+            }
+        },
+        "i_am_a_reference_filter": false,
+        "name": "output_filter",
+        "__class__": "OutputFilter"
+    },
+    "pre_network_filter": {
+        "_observation_filters": {},
+        "_reward_filters": {},
+        "i_am_a_reference_filter": false,
+        "name": "pre_network_filter",
+        "__class__": "NoInputFilter"
+    },
+    "task_parameters": {
+        "apply_stop_condition": false,
+        "checkpoint_restore_path": null,
+        "checkpoint_save_dir": null,
+        "checkpoint_save_secs": null,
+        "evaluate_only": null,
+        "experiment_path": "./experiments/deathmatch_dqn/28_01_2022-19_57",
+        "export_onnx_graph": false,
+        "framework_type": {
+            "_value_": "TensorFlow",
+            "_name_": "tensorflow",
+            "__objclass__": "<enum 'Frameworks'>"
+        },
+        "num_gpu": 1,
+        "seed": null,
+        "task_index": 0,
+        "use_cpu": false,
+        "__class__": "TaskParameters"
+    },
+    "visualization": {
+        "add_rendered_image_to_env_response": false,
+        "dump_csv": true,
+        "dump_gifs": false,
+        "dump_in_episode_signals": false,
+        "dump_mp4": false,
+        "dump_parameters_documentation": true,
+        "dump_signals_to_csv_every_x_episodes": 5,
+        "max_fps_for_human_control": 10,
+        "native_rendering": false,
+        "print_networks_summary": false,
+        "render": true,
+        "tensorboard": false,
+        "video_dump_filters": {
+            "0": {
+                "run_phases": {
+                    "0": {
+                        "_value_": "Testing",
+                        "_name_": "TEST",
+                        "__objclass__": "<enum 'RunPhase'>"
+                    }
+                },
+                "__class__": "SelectedPhaseOnlyDumpFilter"
+            },
+            "1": {
+                "max_reward_achieved": -Infinity,
+                "__class__": "MaxDumpFilter"
+            }
+        },
+        "__class__": "VisualizationParameters"
+    }
+}
+
+env_params: 
+"DoomEnvironmentParameters" {
+    "cameras": {
+        "0": {
+            "_value_": [
+                "observation",
+                "screen_buffer"
+            ],
+            "_name_": "OBSERVATION",
+            "__objclass__": "<enum 'CameraTypes'>"
+        }
+    },
+    "custom_reward_threshold": null,
+    "default_input_filter": {
+        "_observation_filters": {
+            "observation": {
+                "rescaling": {
+                    "name": null,
+                    "output_observation_space": {
+                        "_high": "array([[[255., 255., 255.],\n        [255., 255., 255.],\n        [255., 255., 255.],\n        ...,\n        [255., 255., 255.],\n        [255., 255., 255.],\n        [255., 255., 255.]],\n\n       [[255., 255., 255.],\n        [255., 255., 255.],\n        [255., 255., 255.],\n        ...,\n        [255., 255., 255.],\n        [255., 255., 255.],\n        [255., 255., 255.]],\n\n       [[255., 255., 255.],\n        [255., 255., 255.],\n        [255., 255., 255.],\n        ...,\n        [255., 255., 255.],\n        [255., 255., 255.],\n        [255., 255., 255.]],\n\n       ...,\n\n       [[255., 255., 255.],\n        [255., 255., 255.],\n        [255., 255., 255.],\n        ...,\n        [255., 255., 255.],\n        [255., 255., 255.],\n        [255., 255., 255.]],\n\n       [[255., 255., 255.],\n        [255., 255., 255.],\n        [255., 255., 255.],\n        ...,\n        [255., 255., 255.],\n        [255., 255., 255.],\n        [255., 255., 255.]],\n\n       [[255., 255., 255.],\n        [255., 255., 255.],\n        [255., 255., 255.],\n        ...,\n        [255., 255., 255.],\n        [255., 255., 255.],\n        [255., 255., 255.]]])",
+                        "_low": "array([[[0., 0., 0.],\n        [0., 0., 0.],\n        [0., 0., 0.],\n        ...,\n        [0., 0., 0.],\n        [0., 0., 0.],\n        [0., 0., 0.]],\n\n       [[0., 0., 0.],\n        [0., 0., 0.],\n        [0., 0., 0.],\n        ...,\n        [0., 0., 0.],\n        [0., 0., 0.],\n        [0., 0., 0.]],\n\n       [[0., 0., 0.],\n        [0., 0., 0.],\n        [0., 0., 0.],\n        ...,\n        [0., 0., 0.],\n        [0., 0., 0.],\n        [0., 0., 0.]],\n\n       ...,\n\n       [[0., 0., 0.],\n        [0., 0., 0.],\n        [0., 0., 0.],\n        ...,\n        [0., 0., 0.],\n        [0., 0., 0.],\n        [0., 0., 0.]],\n\n       [[0., 0., 0.],\n        [0., 0., 0.],\n        [0., 0., 0.],\n        ...,\n        [0., 0., 0.],\n        [0., 0., 0.],\n        [0., 0., 0.]],\n\n       [[0., 0., 0.],\n        [0., 0., 0.],\n        [0., 0., 0.],\n        ...,\n        [0., 0., 0.],\n        [0., 0., 0.],\n        [0., 0., 0.]]])",
+                        "_shape": "array([60, 76,  3])",
+                        "channels": "3",
+                        "channels_axis": -1,
+                        "has_colors": "True",
+                        "num_dimensions": 3,
+                        "num_elements": 13680,
+                        "__class__": "ImageObservationSpace"
+                    },
+                    "planar_map_output_shape": "array([60, 76])",
+                    "supports_batching": false,
+                    "__class__": "ObservationRescaleToSizeFilter"
+                },
+                "to_grayscale": {
+                    "name": null,
+                    "supports_batching": false,
+                    "__class__": "ObservationRGBToYFilter"
+                },
+                "to_uint8": {
+                    "input_high": 255,
+                    "input_low": 0,
+                    "name": null,
+                    "supports_batching": false,
+                    "__class__": "ObservationToUInt8Filter"
+                },
+                "stacking": {
+                    "input_observation_space": null,
+                    "name": null,
+                    "stack": {},
+                    "stack_size": 3,
+                    "stacking_axis": -1,
+                    "supports_batching": false,
+                    "__class__": "ObservationStackingFilter"
+                }
+            }
+        },
+        "_reward_filters": {},
+        "i_am_a_reference_filter": true,
+        "name": null,
+        "__class__": "InputFilter"
+    },
+    "default_output_filter": {
+        "_action_filters": {
+            "to_discrete": {
+                "descriptions": null,
+                "input_action_space": null,
+                "name": null,
+                "output_action_space": null,
+                "target_actions": null,
+                "__class__": "FullDiscreteActionSpaceMap"
+            }
+        },
+        "i_am_a_reference_filter": true,
+        "name": null,
+        "__class__": "OutputFilter"
+    },
+    "experiment_path": "./experiments/deathmatch_dqn/28_01_2022-19_57",
+    "frame_skip": 4,
+    "human_control": false,
+    "level": "deathmatch",
+    "seed": null,
+    "target_success_rate": 1.0
+}
+
